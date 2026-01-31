@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #778899;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .container{
+            background-color: #B0C4DE;
+            padding: 20px;
+            border-radius: 6px;
+            width: 550px;
+            text-align: center;
+            
+
+        }
+        h1,h2{
+            margin-bottom: 20px;
+        }
+        h2{
+            margin-top: 20px;
+        }
+         input[type='text']{
+        
+       border-radius: 4px;
+       border: none;
+       padding: 10px;
+
+    }
+    input[type='number']{
+        
+       border-radius: 4px;
+       margin-left: 10px;
+       border: none;
+       padding: 10px;
+       
+    }
+
+    button{
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        margin-left: 8px;
+        background-color: #565fde;
+        color: black;
+        transition:background-color 0.3;
+    }
+     button:hover{
+            background: #3700b3;
+         }
+         #expense-list{
+            list-style-type: none;
+            padding: 0%;
+         }
+         #expense-list li{
+            background: #333333;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+
+         }
+         #total{
+            text-align: right;
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form id="expense-form" >
+            <input type="text"
+            placeholder="Expense name..."
+            id="expense-name"
+            required>
+
+             <input type="number"
+            placeholder="Amount..."
+            id="expense-price"
+            required>
+            <button type="submit" >Add Expense</button>
+        </form>
+        <h2>Expense</h2>
+        
+           <ul id="expense-list">
+
+           </ul>
+
+        <div class="total">
+        <p>Total:Rs<span id="total-amount">0.00</span></p>
+        </div>
+    </div>
+</body>
+</html>
